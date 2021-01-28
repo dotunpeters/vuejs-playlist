@@ -5,10 +5,16 @@ new Vue({
         nearby: false
     },
     methods: {
+        nearbyToggle() {
+            this.nearby = !this.nearby;
+        },
 
+        toggleAvailability() {
+            this.available = !this.available;
+        }
     },
     computed: {
-        compClasses: function(){
+        compClasses(){
             return{
                 available: this.available,
                 nearby: this.nearby,
